@@ -78,7 +78,7 @@ if [ -f "./mediamtx" ] && [ -x "./mediamtx" ]; then
 fi
 
 if [ $NEED_MTX_DOWNLOAD -eq 1 ]; then
-    MTX_VERSION="v1.20.0"
+    MTX_VERSION="v1.16.1"
     echo -e "${YELLOW}Mengunduh MediaMTX ${MTX_VERSION} (${MTX_ARCH})...${NC}"
     MTX_URL="https://github.com/bluenviron/mediamtx/releases/download/${MTX_VERSION}/mediamtx_${MTX_VERSION}_${MTX_ARCH}.tar.gz"
     
