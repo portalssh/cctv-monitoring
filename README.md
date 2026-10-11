@@ -170,7 +170,7 @@ Installer otomatis ini adalah cara **paling simple dan aman** untuk menginstall 
 
 ```bash
 # 1️⃣ Clone repository
-git clone [https://github.com/alijayanet/cctv-monitoring.git](https://github.com/portalssh/cctv-monitoring.git)
+git clone https://github.com/portalssh/cctv-monitoring.git
 cd cctv-monitoring
 
 # 2️⃣ Set permission
