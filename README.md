@@ -177,7 +177,7 @@ cd cctv-monitoring
 chmod +x install.sh
 
 # 3️⃣ Jalankan installer (pilih salah satu)
-sudo bash install.sh              # Ubuntu/Debian/Raspberry Pi
+sudo bash install_ubuntu.sh              # Ubuntu/Debian/Raspberry Pi
 # ATAU
 sudo bash install.sh              # CentOS/Fedora/Armbian
 ```
