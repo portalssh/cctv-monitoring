@@ -174,10 +174,10 @@ git clone https://github.com/portalssh/cctv-monitoring.git
 cd cctv-monitoring
 
 # 2️⃣ Set permission
-chmod +x install_ubuntu.sh
+chmod +x install.sh
 
 # 3️⃣ Jalankan installer (pilih salah satu)
-sudo bash install_ubuntu.sh              # Ubuntu/Debian/Raspberry Pi
+sudo bash install.sh              # Ubuntu/Debian/Raspberry Pi
 # ATAU
 sudo bash install.sh              # CentOS/Fedora/Armbian
 ```
