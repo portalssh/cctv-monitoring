@@ -45,7 +45,7 @@
         "audio_enabled": "true",
         "audio_bitrate": "64k",
         "max_storage_percent": 95,
-        "storage_path": "./recordings"
+        "storage_path": "$(pwd)/recordings"
     },
     "telegram": {
         "enabled": false,
