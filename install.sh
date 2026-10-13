@@ -102,7 +102,7 @@ fi
 # Step 5: Download AI YOLO Model (yolov8n.pt)
 echo -e "\n${BLUE}[5/6] Mengunduh Model AI YOLOv8 Nano (yolov8n.pt)...${NC}"
 MODEL_FILE="yolov8n.pt"
-MODEL_URL="https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt"
+MODEL_URL="https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8n.pt"
 
 if [ ! -f "$MODEL_FILE" ]; then
     wget -O "$MODEL_FILE" "$MODEL_URL" || curl -L -o "$MODEL_FILE" "$MODEL_URL"
