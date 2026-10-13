@@ -35,7 +35,8 @@ else
 fi
 
 if [ "$NEED_NODE" = "1" ]; then
-    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+    NODE_MAJOR=20
+    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
     sudo apt-get install -y nodejs
     echo "Node.js $(node -v) berhasil diinstall."
 fi
