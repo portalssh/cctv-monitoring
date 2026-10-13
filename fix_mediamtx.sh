@@ -32,7 +32,7 @@ echo "ℹ️  File type: $FILE_TYPE"
     fi
     
     rm -f mediamtx mediamtx.yml mediamtx.tar.gz
-    MTX_VERSION="v1.20.0"
+    MTX_VERSION="v1.16.1"
     MTX_URL="https://github.com/bluenviron/mediamtx/releases/download/${MTX_VERSION}/mediamtx_${MTX_VERSION}_${MTX_ARCH}.tar.gz"
     
     if ! (wget -q --show-progress -O mediamtx.tar.gz "$MTX_URL" || curl -L -o mediamtx.tar.gz "$MTX_URL"); then
