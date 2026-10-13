@@ -78,14 +78,14 @@ if [ -f "./mediamtx" ] && [ -x "./mediamtx" ]; then
 fi
 
 if [ $NEED_MTX_DOWNLOAD -eq 1 ]; then
-    MTX_VERSION="v1.21.2"
+    MTX_VERSION="v1.16.1"
     echo -e "${YELLOW}Mengunduh MediaMTX ${MTX_VERSION} (${MTX_ARCH})...${NC}"
     MTX_URL="https://github.com/bluenviron/mediamtx/releases/download/${MTX_VERSION}/mediamtx_${MTX_VERSION}_${MTX_ARCH}.tar.gz"
     
     rm -f mediamtx.tar.gz
     if ! (wget -q --show-progress -O mediamtx.tar.gz "$MTX_URL" || curl -L -o mediamtx.tar.gz "$MTX_URL"); then
-        echo -e "${YELLOW}Gagal mengunduh ${MTX_VERSION}, mencoba versi stabil v1.21.2...${NC}"
-        FALLBACK_URL="https://github.com/bluenviron/mediamtx/releases/download/v1.21.2/mediamtx_v1.21.21_${MTX_ARCH}.tar.gz"
+        echo -e "${YELLOW}Gagal mengunduh ${MTX_VERSION}, mencoba versi stabil v1.16.1...${NC}"
+        FALLBACK_URL="https://github.com/bluenviron/mediamtx/releases/download/v1.16.1/mediamtx_v1.16.1_${MTX_ARCH}.tar.gz"
         wget -q --show-progress -O mediamtx.tar.gz "$FALLBACK_URL" || curl -L -o mediamtx.tar.gz "$FALLBACK_URL"
     fi
     
