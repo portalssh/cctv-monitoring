@@ -175,12 +175,13 @@ cd cctv-monitoring
 
 # 2️⃣ Set permission
 chmod +x install.sh
+chmod +x nodejs.sh
 
-# 3️⃣ Jalankan installer (pilih salah satu)
-sudo bash install.sh              # Ubuntu/Debian/Raspberry Pi
-# ATAU
-sudo bash install.sh              # CentOS/Fedora/Armbian
-```
+# 3️⃣ Jalankan installer (NodeJS V20)
+sudo bash nodejs.sh
+
+# 3️⃣ Jalankan installer (Web Monitoring CCTV Online)
+sudo bash install.sh
 
 **Installer akan otomatis handle (tanpa perlu manual setup):**
 
