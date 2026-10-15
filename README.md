@@ -174,14 +174,20 @@ git clone https://github.com/portalssh/cctv-monitoring.git
 cd cctv-monitoring
 
 # 2️⃣ Set permission
-chmod +x install.sh
 chmod +x nodejs.sh
+chmod +x install.sh
+chmod +x install_ubuntu.sh
 
 # 3️⃣ Jalankan installer (NodeJS V20)
 sudo bash nodejs.sh
 
 # 3️⃣ Jalankan installer (Web Monitoring CCTV Online)
-sudo bash install.sh
+# CentOS/Fedora/Armbian
+sudo bash install.sh 
+
+# 3️⃣ Jalankan installer (Web Monitoring CCTV Online)
+# CentOS/Fedora/Armbian/ubuntu WSL
+sudo bash install_ubuntu.sh 
 
 **Installer akan otomatis handle (tanpa perlu manual setup):**
 
