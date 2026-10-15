@@ -26,7 +26,7 @@ echo -e "\n${BLUE}[1/5] Memeriksa & Menginstal Dependensi Sistem (FFmpeg, Python
 if command -v apt &> /dev/null; then
     sudo apt update -y
     # In Ubuntu 22.04 / 24.04 and Debian 12, use 'libgl1' instead of legacy 'libgl1-mesa-glx'
-    sudo apt install -y python3 python3-pip python3-venv ffmpeg libgl1 libglib2.0-0 build-essential wget curl git || \
+    sudo apt install -y python3 python3-pip python3-venv sqlite3 ffmpeg libgl1 libglib2.0-0 build-essential wget curl git || \
     sudo apt install -y python3 python3-pip ffmpeg libgl1 libglib2.0-0 wget curl git sqlite3
 else
     echo -e "${YELLOW}⚠️ Package manager apt tidak ditemukan. Pastikan Python 3, FFmpeg, dan OpenCV C++ libs sudah terinstall.${NC}"
