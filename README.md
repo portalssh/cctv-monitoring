@@ -169,23 +169,23 @@ Installer otomatis ini adalah cara **paling simple dan aman** untuk menginstall 
 **Hanya 3 command:**
 
 ```bash
-# 1️⃣ Clone repository
+# 1. Clone repository
 git clone https://github.com/portalssh/cctv-monitoring.git
 cd cctv-monitoring
 
-# 2️⃣ Set permission
+# 2. Set permission
 chmod +x nodejs.sh
 chmod +x install.sh
 chmod +x install_ubuntu.sh
 
-# 3️⃣ Jalankan installer (NodeJS V20)
+# 3. Jalankan installer (NodeJS V20)
 sudo bash nodejs.sh
 
-# 3️⃣ Jalankan installer (Web Monitoring CCTV Online)
-# CentOS/Fedora/Armbian
+# 4. Jalankan installer (Web Monitoring CCTV Online)
+# # Ubuntu/Debian/Raspberry Pi
 sudo bash install.sh 
 
-# 3️⃣ Jalankan installer (Web Monitoring CCTV Online)
+# 5. Jalankan installer (Web Monitoring CCTV Online)
 # CentOS/Fedora/Armbian/ubuntu WSL
 sudo bash install_ubuntu.sh 
 
