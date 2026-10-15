@@ -51,7 +51,7 @@ else
 fi
 
 # VERSION="v1.16.1" olt stable version
-VERSION="v1.21.2"
+VERSION="v1.16.1"
 if [ ! -f "mediamtx" ]; then
     echo "Downloading MediaMTX $VERSION for $ARCH ($MEDIAMTX_ARCH)..."
     DOWNLOAD_URL="https://github.com/bluenviron/mediamtx/releases/download/${VERSION}/mediamtx_${VERSION}_${MEDIAMTX_ARCH}.tar.gz"
