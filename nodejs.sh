@@ -12,7 +12,7 @@ curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg 
 
 # Step 2 : Create Nodesource Repository NodeJS (NODE_MAJOR sesuaikan dengan versi linux)
 echo -e "Create Nodesource Repository NodeJS (NODE_MAJOR sesuaikan dengan versi linux)"
-NODE_MAJOR=26
+NODE_MAJOR=20
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
 # Step 3 : Mulai Proses install NodeJS
