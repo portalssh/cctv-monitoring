@@ -137,6 +137,100 @@ if command -v ufw &> /dev/null && sudo ufw status | grep -q "Status: active"; th
     sudo ufw allow 1936/tcp 2>/dev/null || true
 fi
 
+# Create service systemctl cctv-web
+sudo tee /etc/systemd/system/cctv-web.service > /dev/null <<EOF
+[Unit]
+Description=CCTV Monitoring Web Service
+After=network.target mediamtx.service
+
+[Service]
+Type=simple
+User=$USER
+WorkingDirectory=$(pwd)
+ExecStart=/usr/bin/npm start
+Environment=NODE_ENV=production
+Environment=TZ=Asia/Jakarta
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Create service systemctl mediamtx
+FULL_PATH=$(pwd)
+sudo tee /etc/systemd/system/mediamtx.service > /dev/null <<EOF
+[Unit]
+Description=MediaMTX Live Media Router
+After=network-online.target
+
+[Service]
+ExecStart=$(pwd)/mediamtx $(pwd)/mediamtx.yml
+WorkingDirectory=$(pwd)
+User=$USER
+Environment=TZ=Asia/Jakarta
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Update Config mediamtx.yml
+sudo tee mediamtx.yml > /dev/null <<EOF
+###############################################
+# Global settings
+
+# RTSP
+rtspAddress: :8555
+rtpAddress: :8050
+rtcpAddress: :8051
+
+# RTMP
+rtmpAddress: :1936
+
+# HLS
+hlsAddress: :8856
+hlsVariant: fmp4
+
+# WebRTC
+webrtcAddress: :8890
+webrtcLocalUDPAddress: :8190
+
+# SRT
+srtAddress: :8891
+
+# API
+api: yes
+apiAddress: :9123
+
+###############################################
+# Default path settings
+
+pathDefaults:
+  record: yes
+  recordPath: $(pwd)/recordings/%path/%Y-%m-%d_%H-%M-%S.mp4
+  recordFormat: fmp4
+  recordSegmentDuration: 60m
+  recordDeleteAfter: 720h
+
+  runOnReady: $(pwd)/smart_transcode.sh
+  runOnReadyRestart: yes
+
+  runOnRecordSegmentComplete: $(pwd)/record_notify.sh
+
+paths:
+  all_others:
+    source: publisher
+EOF
+
+# Restart Service 
+sudo systemctl daemon-reload
+sudo systemctl enable mediamtx
+sudo systemctl enable cctv-web
+sudo systemctl start mediamtx
+sudo systemctl start cctv-web
+
 # Make scripts executable
 chmod +x install.sh 2>/dev/null || true
 
