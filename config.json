@@ -3,9 +3,9 @@
         "port": 3003,
         "session_secret": "cctv-secret-key-please-change-this-to-random-32-chars-min",
         "behind_https_proxy": true,
-        "public_base_url": "https://stream.alijaya.com",
+        "public_base_url": "https://stream.albicell.net",
         "base_path": "",
-        "repository_url": "alijayanet/cctv-monitoring"
+        "repository_url": "portalssh/cctv-monitoring"
     },
     "authentication": {
         "username": "admin",
@@ -16,7 +16,7 @@
         "api_port": 9123,
         "rtsp_port": 8555,
         "hls_port": 8856,
-        "public_hls_url": "https://stream.alijaya.com"
+        "public_hls_url": "https://stream.albicell.net"
     },
     "onvif": {
         "discovery_timeout": 8000
@@ -28,8 +28,8 @@
     },
     "site": {
         "title": "CCTV ONLINE",
-        "footer": "UJUNGGEBANG",
-        "running_text": "========== Layanan live stream CCTV ALIJAYA-NET =========="
+        "footer": "KARISMA GELAM ASRI",
+        "running_text": "========== Layanan live stream CCTV AALBICELL-NET =========="
     },
     "recording": {
         "enabled": true,
@@ -53,6 +53,6 @@
         "chat_id": "xxxxxxxxxxxx"
     },
     "whatsapp": {
-        "admin_numbers": "081947215703"
+        "admin_numbers": "083871649005"
     }
 }
