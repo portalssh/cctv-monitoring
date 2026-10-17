@@ -177,6 +177,7 @@ cd cctv-monitoring
 chmod +x nodejs.sh
 chmod +x install.sh
 chmod +x install_ubuntu.sh
+chmod +x mount.sh
 
 # 3. Jalankan installer (NodeJS V20)
 sudo bash nodejs.sh
@@ -187,7 +188,10 @@ sudo bash install.sh
 
 # 5. Jalankan installer (Web Monitoring CCTV Online)
 # CentOS/Fedora/Armbian/ubuntu WSL
-sudo bash install_ubuntu.sh 
+sudo bash install_ubuntu.sh
+
+# 6. Buat direktori base untuk mount external storage
+sudo bash mount.sh 
 
 **Installer akan otomatis handle (tanpa perlu manual setup):**
 
